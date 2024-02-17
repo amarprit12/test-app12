@@ -7,15 +7,9 @@ const ChildC = () => {
   const color = useContext(data1);
   return (
     <>
-      <data.Consumer>
-        {() => {
-          return (
-            <h1>
-              My name is {name} and color is {color}{" "}
-            </h1>
-          );
-        }}
-      </data.Consumer>
+      <h1>
+        My name is {name} and color is {color}{" "}
+      </h1>
     </>
   );
 };
