@@ -8,16 +8,21 @@ import { createContext } from "react";
 // how to use it
 
 const data = createContext();
+const data1 = createContext();
+
 function App() {
   const name = "Hey test1";
+  const color = "blue";
   return (
     <>
       <data.Provider value={name}>
-        <ChildA />
+        <data1.Provider value={color}>
+          <ChildA />
+        </data1.Provider>
       </data.Provider>
     </>
   );
 }
 
 export default App;
-export { data };
+export { data, data1 };
